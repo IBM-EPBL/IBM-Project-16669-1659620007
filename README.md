@@ -1,13 +1,13 @@
-**Cloud-based Plasma Donor Application**
+#Cloud-based Plasma Donor Application
 
-A cloud-based web application to help keep track of available Plasma donors and match them with requests for plasma.
+A cloud-based web application to allow registartion of new plasma donors and match them with requests for plasma.
 
-Batch: B7-1A3E
+**Batch: B7-1A3E**
 
-Team Members:
-1. Gokul
-2. Aswin Tony
-3. Abinash
-4. Krupa Thannickal 
+####Team Members:
+1. Gokhul P S
+2. Aswin Tony K
+3. Abinash N
+4. Krupa Elizabeth Thannickal 
 5. Guhabpriyaa G
 
