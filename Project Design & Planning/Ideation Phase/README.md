@@ -1,4 +1,4 @@
-###Ideation Phase
+### Ideation Phase
 Contains the follwoing deliverables:
 1. Problem Statement
 2. Empathy Map
