@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcyan;
+}
+
+/* Setting a style for the table */
+
+table {
+    margin-left: 40%;
+    margin-top: 100px;
+    background-color: lightsteelblue;
+}
+
+/* Setting a style for the submit button */
+.submitbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submitbtn:hover {
+    opacity: 1;
+}
