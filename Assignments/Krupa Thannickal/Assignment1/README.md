@@ -8,6 +8,7 @@ Q1. Form submission and details displayed using POST method
       - sample output is saved in Q1.jpg  
 
 Q2. Flask program using 5 packages from pypi.org  
+  
       - templates folder contains the html pages index.html, feedback.html, scorecalc.html, total.html  
       - static folder contains the JS file handler.js  
       - app.py runs the flask app  
