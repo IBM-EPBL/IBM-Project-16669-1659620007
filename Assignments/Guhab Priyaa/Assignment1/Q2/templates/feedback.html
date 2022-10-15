@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Form</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='handler.js') }}"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Enter your Feedback</h1><br><br>
+        <form onsubmit="formSub()">
+            Name: <input type="text" name="name"><br><br>
+            Feedback: <input type="text" name="feedback"><br><br>
+            Rating: <input type="range" name="rating"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+
+</html>
