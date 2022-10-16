@@ -1,6 +1,6 @@
 Krupa Thannickal's submissions for Assignment-2  
   
-Qs  
+Qs:  
 1. Create User table with user with email, username, roll number, password.  
 2. Perform UPDATE,DELETE Queries with User table.  
 3. Connect python code to db2.  
