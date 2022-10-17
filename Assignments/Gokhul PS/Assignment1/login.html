@@ -1,0 +1,28 @@
+<!-- Store this code in 'login.html' file inside the 'templates' folder -->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Profile</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">		
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Profile</h1>
+				<img src="static/profile.png" alt="profile picture"/>
+			</div></br></br></br>
+			<h2 class="word">
+				<form action="" method="post">
+                {% for key,value in msg.items() %}
+                <input id={{key}} name={{key}} type="text"  placeholder='Your {{key}} is {{ value }}' class="textbox" readonly/></br></br>
+                {% endfor %}
+				</form>
+			</h2>
+			<div class="description"><b>About the username</b> <br>{{desc}}</div>
+			<p class="bottom">Go to registration page<a class="bottom" href="{{url_for('register')}}"> Register again</a></p>
+		</div>
+		</div>
+	</body>
+</html>
