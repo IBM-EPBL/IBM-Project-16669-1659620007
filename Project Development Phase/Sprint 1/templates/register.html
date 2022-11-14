@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTER</title>
+</head>
+
+<body>
+    <center>
+    <h1> REGISTER </h1>
+    <form action="/register" method="post">
+        <div class="msg">{{ msg }}</div></br></br>
+        <input type="text" name="username" placeholder="Enter Username" id="username" required></br></br>
+        <input type="email" name="email" placeholder="Enter Email ID" id="email" required></br></br>
+        <input type="password" name="password" placeholder="Enter Password" id="password" required></br></br>
+        <button type="submit"> Register </button>
+    </form>
+
+    <div>
+        <p> Already have an account? <a href="/login">Login!</a> </p>
+    </div>
+    </center>
+</body>
+
+</html>
