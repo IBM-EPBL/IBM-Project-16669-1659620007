@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>INDEX</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color: skyblue;">
+        <div>
+            <a href="#"><img src="" alt="logo" height="50px" width="180px"></a>
+
+            <div style="text-align: right;">
+                <a type="button" href="login">LOGIN</a>
+                <a type="button" href="register">REGISTER</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <h2  style="text-align: center;">Plasma Donor App</h2>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <!-- what we focus on -->
+    <section style="text-align: center;">
+        <div>
+            <h3>About Plasma Donation</h3>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <!--card format-->
+                            <h5>[Purpose]</h5>
+                            <p>[fill space]</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h5>[Vision]</h5>
+                            <p>[fill space]</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h5>[Objective]</h5>
+                            <p>[fill space]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- focus section ends -->
+
+    <!-- footer starts -->
+    <footer style="text-align: center; background-color: antiquewhite;">
+        <div>
+            <div>
+                <div>
+                    <h4>[Footer]</h4>
+                    <p>[fill space]</p>
+                </div>
+
+                <div>
+                    <h4>Get in Touch</h4>
+                        <a href="mailto:test@gmail.com">plasmaapp@gmail.com</a></br>
+                        <a href="">+91 XXXXXXXXXX</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
