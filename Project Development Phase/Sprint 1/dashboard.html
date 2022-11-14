@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOME - DASHBOARD</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color: skyblue;">
+        <div>
+            <a href="#"><img src="" alt="logo" height="50px" width="180px"></a>
+            <h4 style="text-align: center;">Welcome {{msg}}!</h4>
+            <div style="text-align: right;">
+                <a type="button" href="profile">VIEW PROFILE</a>
+                <a type="button" href="logout">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <section style="text-align: center;">
+        <div><a type="button" href="newdonor" style="font-size:30px" target="_blank">REGISTER AS DONOR</a></div>
+        <hr>
+        <div><a type="button" href="newrequest" style="font-size:30px" target="_blank">REQUEST PLASMA</a></div>
+        <hr>
+        <div>
+            <h2>Requests Made TO You</h2>
+        </div>
+        <hr>
+        <div>
+            <h2>Requests Made BY You</h2>
+        </div>
+    </section>
+</body>
+
+</html>

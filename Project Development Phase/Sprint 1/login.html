@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <center>
+        <h1>LOGIN</h1>
+        <form action="/login" method="post">
+            <div class="msg">{{ msg }}</div></br></br>
+            <input type="text" name="username" placeholder="Enter Your Username" id="username" required></br></br>
+            <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br>
+            <button type="submit" id="button"> Login </button>
+        </form>
+        <div>
+            <p> Don't have an account yet? Click here to <a href="register">register! </a> </p>
+        </div>
+    </center>
+</body>
+
+</html>
