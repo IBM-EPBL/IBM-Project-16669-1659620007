@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CURRENT USER'S REQUESTS</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color: skyblue;">
+        <div>
+            <a href="#"><img src="" alt="logo" height="50px" width="180px"></a>
+            <h4 style="text-align: center;">Welcome {{msg}}!</h4>
+            <div style="text-align: right;">
+                <a type="button" href="profile">VIEW PROFILE</a>
+                <a type="button" href="logout">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <table class="table">
+        <tr class="table__header">
+            {% for header in headings %}
+            <th class="table__cell">{{ header }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr class="table__row">
+            {% for cell in row %}
+            <td class="table__cell">{{ cell }}</td>
+            {% endfor %}
+            <td><a type="button" href="deleterequests">DELETE REQUEST</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

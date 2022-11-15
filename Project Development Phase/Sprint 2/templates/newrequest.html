@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REQUEST PLASMA</title>
+</head>
+
+<body>
+    <nav style="background-color: skyblue;">
+        <div>
+            <a href="#"><img src="" alt="logo" height="50px" width="180px"></a>
+            <div style="text-align: right;">
+                <a type="button" href="profile">VIEW PROFILE</a>
+                <a type="button" href="logout">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- Request Application form -->
+    <div>
+        <h2> Plasma Request Application </h2>
+        <form action="/regrequest" method="post">
+            <label for="pname">Patient's name: </label>
+            <input type="text" name="pname" placeholder="Enter Full Name" required /></br></br>
+            <label for="phone">Emergency contact number: </label>
+            <input type="text" name="phone" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required /></br></br>
+            <label for="paddress">Patient's address: </label>
+            <textarea name="paddress" rows="3" cols="50" placeholder="Enter Address" required></textarea></br></br>
+            <label for="city">Patient's city: </label>
+            <input type="city" name="city" placeholder="Enter City" required /></br></br>
+            <label for="state">Patient's state: </label>
+            <input type="state" name="state" placeholder="Enter State/UT" required /></br></br>
+            <label for="bloodgp">Select the blood group you require: </label>
+            <select name="bloodgp" required>
+                <option value="select" selected>Select Blood Group</option>
+                <option value="O+">O+</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="O-">O-</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+            </select>
+            </br></br>
+            <button type="submit">Apply for Plasma</button>
+        </form>
+    </div>
+</body>
+
+</html>
