@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CURRENT USER'S PROFILE</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="background-color: skyblue;">
+        <div>
+            <a href="#"><img src="" alt="logo" height="50px" width="180px"></a>
+            <h4 style="text-align: center;">Welcome {{msg}}!</h4>
+            <div style="text-align: right;">
+                <a type="button" href="dashboard">DASHBOARD</a>
+                <a type="button" href="profile">VIEW PROFILE</a>
+                <a type="button" href="logout">LOGOUT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <table class="table">
+        <caption>User Profile</caption>
+        {% for key,value in dictprofile.items() %}
+        <tr >
+            <td class="table__row table__header table__cell""> {{ key }} </td>
+            <td class="table__cell"> {{ value }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <pre>To make any changes to your profile, please contact our system administrator at +91 XXXXX XXXXX.
+    </pre>
+
+    <!-- start of website footer -->
+    <footer style="text-align: center; background-color: antiquewhite;">
+        <div>
+            <div>
+                <div>
+                    <h4>[Footer]</h4>
+                    <p>[fill space]</p>
+                </div>
+
+                <div>
+                    <h4>Get in Touch</h4>
+                    <a href="mailto:test@gmail.com">plasmaapp@gmail.com</a></br>
+                    <a href="">+91 XXXXXXXXXX</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
