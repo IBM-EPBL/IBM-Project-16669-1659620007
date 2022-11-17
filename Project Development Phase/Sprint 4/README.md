@@ -5,4 +5,6 @@ Covers functionalities of:
 3. Admin views key System Stats in Dashboard.  
 4. Admin views All Donors.  
 5. Design and UI changes in website.  
-6. Deployment via Docker and Kubernetes.  
+6. Adding images to Cloud Object Storage Bucket and using their public URL.  
+7. Adding SendGrid email verification.  
+8. Deployment via Docker and Kubernetes.  
