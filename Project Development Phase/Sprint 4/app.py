@@ -5,15 +5,7 @@ import ibm_db
 # from flask_mail import Mail, Message
 
 app = Flask(__name__)
-# app.secret_key='a'
 app.config['SECRET_KEY'] = 'pdapp-secret-kii'
-# app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
-# app.config['MAIL_PORT'] = 587
-# app.config['MAIL_USE_TLS'] = True
-# app.config['MAIL_USERNAME'] = 'apikey'
-# app.config['MAIL_PASSWORD'] = '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'
-# app.config['MAIL_DEFAULT_SENDER'] = 'krupa19054@cse.ssn.edu.in'
-# mail = Mail(app)
 
 conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=6667d8e9-9d4d-4ccb-ba32-21da3bb5aafc.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=30376;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=kkt29633;PWD=w2Nriolg1HfcHAwB", '', '')
 
@@ -73,14 +65,6 @@ def register():
             ibm_db.bind_param(prepstmt, 2, email)
             ibm_db.bind_param(prepstmt, 3, password)
             ibm_db.execute(prepstmt)
-            
-            # mailmsg = Message('Registration Verification', recipients=[email])
-            # mailmsg.body = ('Congratulations! Welcome new user!')
-            # mailmsg.html = ('<h1>Plasma App Registration Verification</h1></br>'
-            #                 '<p>Congratulations! Welcome new user!</p></br>'
-            #                 '<b>Plasma Donor App Team</b>!')
-            # mail.send(mailmsg)
-            # print("mail has been sent out")
 
             msg = "You have successfully created an account!"
             flash(msg)
