@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DONOR REGISTRATION</title>
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/dashboards.css') }}">
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/forms.css') }}">
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div style="text-align: right;">
+      <ul>
+        <li><a style="color: white" href="profile">PROFILE</a></li>
+        <li><a style="color: white" href="dashboard">DASHBOARD</a></li>
+        <li><a type="button" href="logout">LOGOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+  <!-- Donor Registration form -->
+  <div>
+    <form action="/regdonor" method="post">
+      <h2 style="text-align: center; font-size: larger;"> NEW DONOR REGISTRATION </h2>
+      <fieldset>
+        <div style="margin-left:25%">
+          <h3 class="mt-5">Full Name:</br><input type="text" name="name" placeholder="Enter Full Name" required
+              style="color: black; font-weight: bold;" />
+          </h3></br>
+          <h3>Age:</br><input type="text" name="age" placeholder="Enter Age" pattern="[0-9]{1,3}" required
+              style="color: black; font-weight: bold;" />
+          </h3></br>
+          <h3>Gender:</br><select name="gender" required style="color: black;">
+              <option value="select" selected>Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </h3></br>
+          <h3>Mobile Number:</br><input type="text" name="phone" placeholder="Enter Mobile Number" pattern="[0-9]{10}"
+              required style="color: black; font-weight: bold;" />
+          </h3></br>
+          <h3>Address:</br><textarea name="address" rows="3" cols="50" placeholder="Enter Address" required
+              style="color: black; font-weight: bold;"></textarea>
+          </h3></br>
+          <h3>City:</br><input type="city" name="city" placeholder="Enter City" required
+              style="color: black; font-weight: bold;" />
+          </h3></br>
+          <h3>State:</br><input type="state" name="state" placeholder="Enter State" required
+              style="color: black; font-weight: bold;" />
+          </h3></br>
+          <h3>Blood group:</br><select name="bloodgp" required style="color: black;">
+              <option value="select" selected>Select your blood group</option>
+              <option value="O+">O+</option>
+              <option value="A+">A+</option>
+              <option value="B+">B+</option>
+              <option value="AB+">AB+</option>
+              <option value="O-">O-</option>
+              <option value="A-">A-</option>
+              <option value="B-">B-</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </h3></br>
+          <h3>
+            <label for="dop">Date of Positive Covid Test: </label></br>
+            <input type="date" name="dop" required style="color: black; font-weight: bold;" /></br></br>
+          </h3>
+          <h3>
+            <label for="don">Date of Negative Covid Test: </label></br>
+            <input type="date" name="don" required style="color: black; font-weight: bold;" /></br></br>
+          </h3>
+          <button class="button" type="submit"> Register As Donor </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

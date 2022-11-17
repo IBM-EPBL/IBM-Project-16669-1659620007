@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ADMIN DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/dashboards.css') }}">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/tables.css') }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <ul>
+        <li><a style="color: white" href="logout">LOGOUT</a></li>
+    </ul>
+    <div class="class-container" id="container">
+        <div class="header">
+            <h2 class="header__title">
+                Welcome Admin {{msg}}!
+            </h2>
+        </div>
+    </div>
+
+    <div class="flasher">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="flex justify-center mt-2">
+        <table class="table">
+            <caption>KEY SYSTEM STATS</caption>
+            <tr class="table__row">
+                <td class="table__cell">Number of Donors</td>
+                <td class="table__cell">{{ numdonors }}</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Number of Requests</td>
+                <td class="table__cell">{{ numreqs }}</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__cell">Number of Approved Requests</td>
+                <td class="table__cell">{{ numappreqs }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="flex justify-center mt-2">
+        <div class="block p-6 rounded-lg shadow-lg bg-black max-w-sm">
+            <a href="allrequests">
+                <button type="button"
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">VIEW
+                    ALL REQUESTS FOR PLASMA</button>
+            </a>
+        </div>
+    </div>
+    <div class="flex justify-center mt-10">
+        <div class="block p-6 rounded-lg shadow-lg bg-black max-w-sm">
+            <a href="alldonors">
+                <button type="button"
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">VIEW
+                    ALL DONORS ON SYSTEM</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

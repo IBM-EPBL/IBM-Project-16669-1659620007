@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ALL REQUESTS</title>
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/tables.css') }}">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/results.css') }}">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/forms.css') }}">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <ul>
+        <div style="text-align: right;">
+            <li><a type="button" href="dashboard">DASHBOARD</a></li>
+            <li><a type="button" href="logout">LOGOUT</a></li>
+        </div>
+    </ul>
+    <div class="class-container" id="container">
+        <h4 style="text-align: center; color:white; font-size:25px; margin-bottom: 100px;">System has the following
+            requests.</h4>
+    </div>
+    <!-- navbar ends -->
+
+    <!-- requests table starts -->
+    <div class="flex justify-center mt-2">
+        <table class="table">
+            <caption>ALL REQUESTS</caption>
+            <tr class="table__header">
+                {% for header in headings %}
+                <th class="table__cell">{{ header }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in data %}
+            <tr class="table__row">
+                {% for cell in row %}
+                <td class="table__cell">{{ cell }}</td>
+                {% endfor %}
+                <td>
+                    <form action="/deletereq" method="POST" onsubmit="alert('YOU CANNOT UNDO THIS ACTION!')">
+                        <input type="hidden" name="username" value="{{ row[0] }}">
+                        <input type="hidden" name="pname" value="{{ row[1] }}">
+                        <button id="deletebutton" class="button" type="submit"> Delete Request </button>
+                    </form>
+                    <form action="/approvereq" method="POST">
+                        <input type="hidden" name="pname" value="{{ row[1] }}">
+                        <input type="hidden" name="phone" value="{{ row[2] }}">
+                        <input type="hidden" name="state" value="{{ row[5] }}">
+                        <input type="hidden" name="bgp" value="{{ row[6] }}">
+                        <button class="button" type="submit"> Approve Request </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
