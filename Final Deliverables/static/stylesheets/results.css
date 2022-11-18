@@ -1,0 +1,48 @@
+@media screen and (min-width: 801px) {
+    html {
+        background-image: url("https://s3.jp-tok.cloud-object-storage.appdomain.cloud/plasma-53045-bucket/blood.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        height: 100vh;
+        font-family: "Montserrat";
+        color: #fff;
+        font-size: 22px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: black;
+    }
+}
