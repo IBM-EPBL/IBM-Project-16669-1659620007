@@ -1,0 +1,243 @@
+@media screen and (min-width: 801px) {
+  html {
+    /* background-image: url("/static/images/blood.jpg"); */
+    background-image: url("https://s3.jp-tok.cloud-object-storage.appdomain.cloud/plasma-53045-bucket/blood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    height: 100vh;
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 22px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: black;
+  }
+
+  .contfoot {
+    display: flex;
+    justify-content: center;
+  }
+
+  .active {
+    background-color: #17e3d9;
+  }
+
+  #head {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    animation-name: headers;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes headers {
+    0% {
+      left: 0vw;
+      top: 0vw;
+    }
+
+    33% {
+      left: -20vw;
+      top: 0vw;
+    }
+
+    66% {
+      left: 20vw;
+      top: 0vw;
+    }
+
+    100% {
+      left: 0vw;
+      top: 0vw;
+    }
+  }
+
+  .navlist {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 0.2px;
+  }
+
+  .ulist {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .item {
+    float: left;
+    list-style: none;
+    margin-left: 2vw;
+    border: 1.5px solid whitesmoke;
+  }
+
+  .item:hover {
+    float: left;
+    list-style: none;
+    margin-left: 2vw;
+    border: 0.01vw solid red;
+    background-color: red;
+    color: white;
+  }
+
+  #navi {
+    margin-top: 2vw;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+  }
+
+  .itemselect {
+    float: left;
+    list-style: none;
+    margin-left: 2vw;
+    border: 0.01vw solid red;
+    background-color: red;
+    color: white;
+  }
+
+  .bdy {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  #imag {
+    float: left;
+    margin-right: 3vw;
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .para {
+    font-size: 1.5vw;
+  }
+
+  .paras {
+    font-size: 1.2vw;
+    margin-top: 20px;
+  }
+
+  .footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .footer-basic li {
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+
+  .flasher {
+    background-color: lightgrey;
+    font-weight: bold;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.history__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.class-container {
+  width: 100%;
+  position: relative;
+  padding: 60px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.class-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
