@@ -1,6 +1,6 @@
 # Cloud-based Plasma Donor Application
 
-A cloud-based web application to allow registartion of new plasma donors and match them with requests for plasma.
+A cloud-based web application to allow registration of new plasma donors and match them with requests for plasma.
 
 ### **Batch: B7-1A3E**
 ### **Team ID: PNT2022TMID53045**
