@@ -1,0 +1,1 @@
+images folder is not used in final deployment as all images will be stored in cloud object storage bucket  named "plasma-53045-bucket"
