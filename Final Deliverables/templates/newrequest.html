@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>REQUEST PLASMA</title>
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/dashboards.css') }}">
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/forms.css') }}">
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div style="text-align: right;">
+      <ul>
+        <li><a style="color: white" href="profile">PROFILE</a></li>
+        <li><a style="color: white" href="dashboard">DASHBOARD</a></li>
+        <li><a type="button" href="logout">LOGOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+  <!-- Request Application form -->
+  <div>
+    <form action="/regrequest" method="post">
+      <h2 style="text-align: center; font-size: larger;">NEW PLASMA REQUEST </h2>
+      <fieldset>
+        <div style="margin-left:25%">
+          <h3 class="mt-5"><label for="pname">Patient's Name: </label></h3>
+          <input type="text" name="pname" placeholder="Enter Full Name" style="color: black; font-weight: bold;" required /></br></br>
+          <h3>
+            <label for="phone">Emergency Contact Number: </label></br>
+            <input type="text" name="phone" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required
+              style="color: black; font-weight: bold;" /></br></br>
+          </h3>
+          <h3>
+            <label for="paddress">Patient's Address: </label></br>
+            <textarea name="paddress" rows="3" cols="50" placeholder="Enter Address" required
+              style="color: black; font-weight: bold;"></textarea></br></br>
+          </h3>
+          <h3>
+            <label for="city">Patient's City: </label></br>
+            <input type="city" name="city" placeholder="Enter City" required
+              style="color: black; font-weight: bold;" /></br></br>
+          </h3>
+          <h3>
+            <label for="state">Patient's State: </label></br>
+            <input type="state" name="state" placeholder="Enter State" required
+              style="color: black; font-weight: bold;" /></br></br>
+          </h3>
+          <h3>
+            <label for="bloodgp">Blood Group: </label></br>
+            <select name="bloodgp" style="color: black;" required>
+              <option value="select" style="color: black;" selected>Select blood group required
+              </option>
+              <option value="O+" style="color: black;">O+</option>
+              <option value="A+" style="color: black;">A+</option>
+              <option value="B+" style="color: black;">B+</option>
+              <option value="AB+" style="color: black;">AB+</option>
+              <option value="O-" style="color: black;">O-</option>
+              <option value="A-" style="color: black;">A-</option>
+              <option value="B-" style="color: black;">B-</option>
+              <option value="AB-" style="color: black;">AB-</option>
+            </select>
+            </br></br>
+          </h3>
+          <button class="button" type="submit"> Apply for Plasma </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
