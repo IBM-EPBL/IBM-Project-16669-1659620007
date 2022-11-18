@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    description: |2-
+
+      Plasma App kube version 1.0
+  creationTimestamp: "2022-11-18T05:54:08Z"
+  finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    k8s-app: plasma-donor-app-53045
+  name: plasma-donor-app-53045
+  namespace: default
+  resourceVersion: "329075"
+  uid: 15b7827b-959b-4dda-ba6d-443683ccda8f
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 172.21.99.152
+  clusterIPs:
+    - 172.21.99.152
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - name: tcp-5000-5000-jhk2v
+      nodePort: 30630
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    k8s-app: plasma-donor-app-53045
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
